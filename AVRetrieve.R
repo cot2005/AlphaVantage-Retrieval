@@ -1,6 +1,5 @@
 AVRetrieve<-function(tickers, AVKey, sltime = 20, headers = TRUE) {
   tickersnum <- length(tickers)
-  
   #downloads the dayrange of data for each stock
   for (i in 1:tickersnum) {
     avhtml <- paste("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=", tickers[i],"&apikey=", AVKey,"&datatype=csv", 
